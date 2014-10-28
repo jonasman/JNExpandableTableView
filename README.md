@@ -1,7 +1,9 @@
 JNExpandableTableView
 =====================
 
-Easy Expandable TableView
+Easy to use Expandable TableView with animated insertion and removal.
+The code is inspired by Apple's example DateCell
+
 ![alt tag](http://s29.postimg.org/qn3ei2oyv/i_OS_Simulator_Screen_Shot_28_Oct_2014_18_04_41.png)
 
 Installation
@@ -15,9 +17,9 @@ Delegates
 ============
 
 To expand a cell just implement:
-`
+```
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath
-`
+```
 and return `YES`
 
 
@@ -26,12 +28,39 @@ DataSource
 
 As there are no delegate interceptions you need to return the number of cells in this format:
 
-`
+```
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     JNExpandableTableViewNumberOfRows(20)
 }
-`
+```
+
+To return an expanded Cell, check the indexPath and return the cell you need:
+```
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([self.tableView.expandedContentIndexPath isEqual:indexPath])
+    {
+        static NSString *CellIdentifier = @"expandedCell";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        return cell;
+
+    }
+    
+    else
+    {
+        static NSString *CellIdentifier = @"Cell";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"Index: %ld",(long)indexPath.row];
+        
+        return cell;
+    }
+}
+```
 
 Considerations
 ============
