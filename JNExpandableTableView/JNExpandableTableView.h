@@ -12,10 +12,8 @@
 
 
 // Macro to help calculating the number of rows
-#define JNExpandableTableViewNumberOfRows(rows) \
-BOOL expandedSection = (section == self.tableView.expandedIndexPath.section && self.tableView.expandedIndexPath); \
-\
-return rows + (expandedSection?1:0);
+#define JNExpandableTableViewNumberOfRowsInSection(tableView,rows) \
+rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.section && ((JNExpandableTableView *)tableView).expandedIndexPath?1:0)
 
 
 @protocol JNExpandableTableViewDataSource <NSObject, UITableViewDataSource>
