@@ -11,11 +11,21 @@
 @class JNExpandableTableView;
 
 
+// Macro to help calculating the number of rows
+#define JNExpandableTableViewNumberOfRows(rows) \
+BOOL expandedSection = (section == self.tableView.expandedIndexPath.section && self.tableView.expandedIndexPath); \
+\
+return rows + (expandedSection?1:0);
+
+
 @protocol JNExpandableTableViewDataSource <NSObject, UITableViewDataSource>
 
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath;
 
 @end
+
+
+
 
 
 @interface JNExpandableTableView : UITableView
@@ -24,7 +34,7 @@
 @property (nonatomic, assign) id <JNExpandableTableViewDataSource> dataSource;
 
 
-@property (nonatomic) NSIndexPath * expandedIndexPath;
-@property (nonatomic ,readonly) NSIndexPath * expandedContentIndexPath;
+@property (nonatomic) NSIndexPath * expandedIndexPath; // Original expanded IndexPath
+@property (nonatomic ,readonly) NSIndexPath * expandedContentIndexPath; // IndexPath holding the newly created expanded cell
 
 @end

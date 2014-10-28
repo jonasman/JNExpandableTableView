@@ -48,16 +48,19 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
     UITouch *touch = [touches anyObject];
     const CGPoint location = [touch locationInView:self];
 
+    
     NSIndexPath * iPath = [self indexPathForRowAtPoint:location];
+    
     
     if ([iPath isEqual:self.expandedIndexPath])
     {
         [self collapseCell:iPath];
     }
-    else
+    else if (![iPath isEqual:self.expandedContentIndexPath])
     {
         [self beginUpdates];
         
@@ -69,14 +72,15 @@
             [self collapseCell:self.expandedIndexPath];
         
         if (canExpand)
-        {
             [self expandCell:adjustedIpath];
-        }
-        
         
         [self endUpdates];
+        
+        if (canExpand)
+            [self scrollToRowAtIndexPath:self.expandedContentIndexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
     }
     
+    [super touchesEnded:touches withEvent:event];
 }
 
 - (BOOL)isAnyCellExpanded

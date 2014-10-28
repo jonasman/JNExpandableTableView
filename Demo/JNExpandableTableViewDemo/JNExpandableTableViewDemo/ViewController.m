@@ -22,8 +22,18 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)reload:(id)sender {
+
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -36,7 +46,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2 + (self.tableView.expandedIndexPath?1:0);
+    
+    JNExpandableTableViewNumberOfRows(20)
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,9 +57,6 @@
         static NSString *CellIdentifier = @"expandedCell";
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        //cell.textLabel.text = [NSString stringWithFormat:@"Index: %ld",(long)indexPath.row];
-        //cell.detailTextLabel.text = @"Expanded";
         
         return cell;
 
