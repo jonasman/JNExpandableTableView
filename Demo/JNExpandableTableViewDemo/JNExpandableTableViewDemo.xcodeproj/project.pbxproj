@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF194BF919FFB44700316D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194BF819FFB44700316D47 /* main.m */; };
+		CF194BFC19FFB44700316D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194BFB19FFB44700316D47 /* AppDelegate.m */; };
+		CF194BFF19FFB44700316D47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194BFE19FFB44700316D47 /* ViewController.m */; };
+		CF194C0219FFB44700316D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF194C0019FFB44700316D47 /* Main.storyboard */; };
+		CF194C0419FFB44700316D47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF194C0319FFB44700316D47 /* Images.xcassets */; };
+		CF194C0719FFB44700316D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF194C0519FFB44700316D47 /* LaunchScreen.xib */; };
+		CF194C1319FFB44700316D47 /* JNExpandableTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194C1219FFB44700316D47 /* JNExpandableTableViewDemoTests.m */; };
+		CF194C1F19FFB47D00316D47 /* JNExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194C1E19FFB47D00316D47 /* JNExpandableTableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF194C0D19FFB44700316D47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF194BEB19FFB44700316D47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF194BF219FFB44700316D47;
+			remoteInfo = JNExpandableTableViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF194BF319FFB44700316D47 /* JNExpandableTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JNExpandableTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF194BF719FFB44700316D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF194BF819FFB44700316D47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF194BFA19FFB44700316D47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF194BFB19FFB44700316D47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF194BFD19FFB44700316D47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF194BFE19FFB44700316D47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF194C0119FFB44700316D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF194C0319FFB44700316D47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF194C0619FFB44700316D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CF194C0C19FFB44700316D47 /* JNExpandableTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JNExpandableTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF194C1119FFB44700316D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF194C1219FFB44700316D47 /* JNExpandableTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNExpandableTableViewDemoTests.m; sourceTree = "<group>"; };
+		CF194C1D19FFB47D00316D47 /* JNExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNExpandableTableView.h; sourceTree = "<group>"; };
+		CF194C1E19FFB47D00316D47 /* JNExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNExpandableTableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF194BF019FFB44700316D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF194C0919FFB44700316D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF194BEA19FFB44700316D47 = {
+			isa = PBXGroup;
+			children = (
+				CF194C1C19FFB46200316D47 /* JNExpandableTableView */,
+				CF194BF519FFB44700316D47 /* JNExpandableTableViewDemo */,
+				CF194C0F19FFB44700316D47 /* JNExpandableTableViewDemoTests */,
+				CF194BF419FFB44700316D47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF194BF419FFB44700316D47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF194BF319FFB44700316D47 /* JNExpandableTableViewDemo.app */,
+				CF194C0C19FFB44700316D47 /* JNExpandableTableViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF194BF519FFB44700316D47 /* JNExpandableTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CF194BFA19FFB44700316D47 /* AppDelegate.h */,
+				CF194BFB19FFB44700316D47 /* AppDelegate.m */,
+				CF194BFD19FFB44700316D47 /* ViewController.h */,
+				CF194BFE19FFB44700316D47 /* ViewController.m */,
+				CF194C0019FFB44700316D47 /* Main.storyboard */,
+				CF194C0319FFB44700316D47 /* Images.xcassets */,
+				CF194C0519FFB44700316D47 /* LaunchScreen.xib */,
+				CF194BF619FFB44700316D47 /* Supporting Files */,
+			);
+			path = JNExpandableTableViewDemo;
+			sourceTree = "<group>";
+		};
+		CF194BF619FFB44700316D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF194BF719FFB44700316D47 /* Info.plist */,
+				CF194BF819FFB44700316D47 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF194C0F19FFB44700316D47 /* JNExpandableTableViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF194C1219FFB44700316D47 /* JNExpandableTableViewDemoTests.m */,
+				CF194C1019FFB44700316D47 /* Supporting Files */,
+			);
+			path = JNExpandableTableViewDemoTests;
+			sourceTree = "<group>";
+		};
+		CF194C1019FFB44700316D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF194C1119FFB44700316D47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF194C1C19FFB46200316D47 /* JNExpandableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CF194C1D19FFB47D00316D47 /* JNExpandableTableView.h */,
+				CF194C1E19FFB47D00316D47 /* JNExpandableTableView.m */,
+			);
+			name = JNExpandableTableView;
+			path = ../../JNExpandableTableView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF194BF219FFB44700316D47 /* JNExpandableTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF194C1619FFB44700316D47 /* Build configuration list for PBXNativeTarget "JNExpandableTableViewDemo" */;
+			buildPhases = (
+				CF194BEF19FFB44700316D47 /* Sources */,
+				CF194BF019FFB44700316D47 /* Frameworks */,
+				CF194BF119FFB44700316D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JNExpandableTableViewDemo;
+			productName = JNExpandableTableViewDemo;
+			productReference = CF194BF319FFB44700316D47 /* JNExpandableTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF194C0B19FFB44700316D47 /* JNExpandableTableViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF194C1919FFB44700316D47 /* Build configuration list for PBXNativeTarget "JNExpandableTableViewDemoTests" */;
+			buildPhases = (
+				CF194C0819FFB44700316D47 /* Sources */,
+				CF194C0919FFB44700316D47 /* Frameworks */,
+				CF194C0A19FFB44700316D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF194C0E19FFB44700316D47 /* PBXTargetDependency */,
+			);
+			name = JNExpandableTableViewDemoTests;
+			productName = JNExpandableTableViewDemoTests;
+			productReference = CF194C0C19FFB44700316D47 /* JNExpandableTableViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF194BEB19FFB44700316D47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = joao;
+				TargetAttributes = {
+					CF194BF219FFB44700316D47 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					CF194C0B19FFB44700316D47 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = CF194BF219FFB44700316D47;
+					};
+				};
+			};
+			buildConfigurationList = CF194BEE19FFB44700316D47 /* Build configuration list for PBXProject "JNExpandableTableViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF194BEA19FFB44700316D47;
+			productRefGroup = CF194BF419FFB44700316D47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF194BF219FFB44700316D47 /* JNExpandableTableViewDemo */,
+				CF194C0B19FFB44700316D47 /* JNExpandableTableViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF194BF119FFB44700316D47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF194C0219FFB44700316D47 /* Main.storyboard in Resources */,
+				CF194C0719FFB44700316D47 /* LaunchScreen.xib in Resources */,
+				CF194C0419FFB44700316D47 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF194C0A19FFB44700316D47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF194BEF19FFB44700316D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF194BFF19FFB44700316D47 /* ViewController.m in Sources */,
+				CF194C1F19FFB47D00316D47 /* JNExpandableTableView.m in Sources */,
+				CF194BFC19FFB44700316D47 /* AppDelegate.m in Sources */,
+				CF194BF919FFB44700316D47 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF194C0819FFB44700316D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF194C1319FFB44700316D47 /* JNExpandableTableViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF194C0E19FFB44700316D47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF194BF219FFB44700316D47 /* JNExpandableTableViewDemo */;
+			targetProxy = CF194C0D19FFB44700316D47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF194C0019FFB44700316D47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF194C0119FFB44700316D47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF194C0519FFB44700316D47 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF194C0619FFB44700316D47 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF194C1419FFB44700316D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF194C1519FFB44700316D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF194C1719FFB44700316D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = JNExpandableTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF194C1819FFB44700316D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = JNExpandableTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CF194C1A19FFB44700316D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JNExpandableTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JNExpandableTableViewDemo.app/JNExpandableTableViewDemo";
+			};
+			name = Debug;
+		};
+		CF194C1B19FFB44700316D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JNExpandableTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JNExpandableTableViewDemo.app/JNExpandableTableViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF194BEE19FFB44700316D47 /* Build configuration list for PBXProject "JNExpandableTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF194C1419FFB44700316D47 /* Debug */,
+				CF194C1519FFB44700316D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF194C1619FFB44700316D47 /* Build configuration list for PBXNativeTarget "JNExpandableTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF194C1719FFB44700316D47 /* Debug */,
+				CF194C1819FFB44700316D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF194C1919FFB44700316D47 /* Build configuration list for PBXNativeTarget "JNExpandableTableViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF194C1A19FFB44700316D47 /* Debug */,
+				CF194C1B19FFB44700316D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF194BEB19FFB44700316D47 /* Project object */;
+}
