@@ -16,7 +16,7 @@ Installation
 Delegates
 ============
 
-To expand a cell just implement:
+To make a cell expandable just implement:
 ```
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath
 ```
