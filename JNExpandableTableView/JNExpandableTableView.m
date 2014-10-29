@@ -105,9 +105,9 @@
             // index: 3
             
             
-            if (indexPath.row < self.expandedIndexPath.row)
+            if (indexPath.row <= self.expandedIndexPath.row)
                 return indexPath;
-            else //(indexPath.row >= self.expandedIndexPath.row)
+            else //(indexPath.row > self.expandedIndexPath.row)
                 return [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:indexPath.section];
         }
         
