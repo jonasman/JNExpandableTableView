@@ -31,7 +31,7 @@ As there are no delegate interceptions you need to return the number of cells in
 ```
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    JNExpandableTableViewNumberOfRows(20)
+    return JNExpandableTableViewNumberOfRowsInSection(tableView,20);
 }
 ```
 
