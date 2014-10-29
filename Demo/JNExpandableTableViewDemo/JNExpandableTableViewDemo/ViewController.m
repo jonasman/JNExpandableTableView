@@ -39,7 +39,7 @@
 {
     if ([indexPath isEqual:self.tableView.expandedContentIndexPath])
     {
-        return 100.0f;
+        return 160.0f;
     }
     else
         return 44.0f;
@@ -51,6 +51,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSIndexPath * adjustedIndexPath = [self.tableView adjustedIndexPath:indexPath];
     
     if ([self.tableView.expandedContentIndexPath isEqual:indexPath])
     {
@@ -68,7 +70,7 @@
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
-        cell.textLabel.text = [NSString stringWithFormat:@"Index: %ld",(long)indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"Index: %ld",(long)adjustedIndexPath.row];
         
         return cell;
     }
