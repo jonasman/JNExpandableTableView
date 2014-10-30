@@ -18,11 +18,24 @@ rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.sectio
 
 @protocol JNExpandableTableViewDataSource <NSObject, UITableViewDataSource>
 
+
+- (NSInteger)tableView:(JNExpandableTableView *)tableView numberOfRowsInSection:(NSInteger)section;
+
+
+
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath;
 
 @end
 
 
+
+@protocol JNExpandableTableViewDelegate <NSObject, UITableViewDelegate>
+
+
+- (void)tableView:(JNExpandableTableView *)tableView willExpand:(NSIndexPath *)indexPath;
+- (void)tableView:(JNExpandableTableView *)tableView willCollapse:(NSIndexPath *)indexPath;
+
+@end
 
 
 
@@ -30,6 +43,7 @@ rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.sectio
 
 
 @property (nonatomic, assign) id <JNExpandableTableViewDataSource> dataSource;
+@property (nonatomic, assign) id <JNExpandableTableViewDelegate> delegate;
 
 
 @property (nonatomic) NSIndexPath * expandedIndexPath; // Original expanded IndexPath

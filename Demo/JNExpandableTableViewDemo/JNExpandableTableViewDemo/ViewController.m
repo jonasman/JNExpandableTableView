@@ -45,7 +45,7 @@
         return 44.0f;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(JNExpandableTableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return JNExpandableTableViewNumberOfRowsInSection(tableView,20);
 }
@@ -79,6 +79,14 @@
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath
 {
     return YES;
+}
+- (void)tableView:(JNExpandableTableView *)tableView willExpand:(NSIndexPath *)indexPath
+{
+    NSLog(@"Will Expand: %@",indexPath);
+}
+- (void)tableView:(JNExpandableTableView *)tableView willCollapse:(NSIndexPath *)indexPath
+{
+    NSLog(@"Will Collapse: %@",indexPath);
 }
 
 @end

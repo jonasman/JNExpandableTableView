@@ -19,21 +19,32 @@
         unsigned tableViewCanExpand : 1;
     } _expandedDataSourceHas;
     
+    struct {
+        unsigned tableViewWillExpand : 1;
+        unsigned tableViewWillCollapse : 1;
+    } _expandedDelegateHas;
+    
 }
 
 
 #pragma mark Public
 
-- (id)dataSource
-{
-    return [super dataSource];
-}
 - (void)setDataSource:(id<JNExpandableTableViewDataSource>)dataSource
 {
     [super setDataSource:dataSource];
     
     _expandedDataSourceHas.tableViewCanExpand = [dataSource respondsToSelector:@selector(tableView:canExpand:)];
+   
 }
+
+- (void)setDelegate:(id<JNExpandableTableViewDelegate>)delegate
+{
+    [super setDelegate:delegate];
+    
+    _expandedDelegateHas.tableViewWillExpand = [delegate respondsToSelector:@selector(tableView:willExpand:)];
+    _expandedDelegateHas.tableViewWillCollapse = [delegate respondsToSelector:@selector(tableView:willCollapse:)];
+}
+
 
 - (NSIndexPath *)expandedContentIndexPath
 {
@@ -124,6 +135,9 @@
     [self insertRowsAtIndexPaths:@[expandedIndexPath]
                           withRowAnimation:UITableViewRowAnimationFade];
     
+    if (_expandedDelegateHas.tableViewWillExpand)
+        [self.delegate tableView:self willExpand:indexPath];
+    
 }
 - (void)collapseCell:(NSIndexPath *)indexPath
 {
@@ -131,6 +145,9 @@
     self.expandedIndexPath = nil;
    
     [self deleteRowsAtIndexPaths:@[expandedIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    if (_expandedDelegateHas.tableViewWillCollapse)
+        [self.delegate tableView:self willCollapse:indexPath];
     
 }
 
