@@ -31,7 +31,7 @@ rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.sectio
 
 @protocol JNExpandableTableViewDelegate <NSObject, UITableViewDelegate>
 
-
+@optional
 - (void)tableView:(JNExpandableTableView *)tableView willExpand:(NSIndexPath *)indexPath;
 - (void)tableView:(JNExpandableTableView *)tableView willCollapse:(NSIndexPath *)indexPath;
 
