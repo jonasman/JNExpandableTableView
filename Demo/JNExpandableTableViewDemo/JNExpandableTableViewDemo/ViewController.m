@@ -52,7 +52,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSIndexPath * adjustedIndexPath = [self.tableView adjustedIndexPath:indexPath];
+    NSIndexPath * adjustedIndexPath = [self.tableView adjustedIndexPathFromTable:indexPath];
     
     if ([self.tableView.expandedContentIndexPath isEqual:indexPath])
     {

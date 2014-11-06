@@ -75,7 +75,7 @@
     {
         [self beginUpdates];
         
-        NSIndexPath * adjustedIpath = [self adjustedIndexPath:iPath];
+        NSIndexPath * adjustedIpath = [self adjustedIndexPathFromTable:iPath];
         
         BOOL canExpand =  _expandedDataSourceHas.tableViewCanExpand? [self.dataSource tableView:self canExpand:adjustedIpath] : NO;
         
@@ -99,7 +99,7 @@
     return self.expandedIndexPath != nil;
 }
 
-- (NSIndexPath *)adjustedIndexPath:(NSIndexPath *)indexPath
+- (NSIndexPath *)adjustedIndexPathFromTable:(NSIndexPath *)indexPath
 {
     if ([self isAnyCellExpanded])
     {
@@ -126,6 +126,35 @@
     else
         return indexPath;
 }
+- (NSIndexPath *)adjustedIndexPathFromDelegate:(NSIndexPath *)indexPath
+{
+    if ([self isAnyCellExpanded])
+    {
+        
+        if (self.expandedIndexPath.section != indexPath.section)
+            return indexPath;
+        
+        else
+        {
+            
+            // index: 0
+            // index: 1
+            // expanded: 2
+            // index: 3
+            
+            
+            if (indexPath.row <= self.expandedIndexPath.row)
+                return indexPath;
+            else //(indexPath.row > self.expandedIndexPath.row)
+                return [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+        }
+        
+    }
+    else
+        return indexPath;
+}
+
+
 
 - (void)expandCell:(NSIndexPath *)indexPath
 {

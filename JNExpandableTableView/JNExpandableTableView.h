@@ -46,9 +46,11 @@ rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.sectio
 @property (nonatomic, assign) id <JNExpandableTableViewDelegate> delegate;
 
 
-@property (nonatomic) NSIndexPath * expandedIndexPath; // Original expanded IndexPath
+@property (nonatomic) NSIndexPath * expandedIndexPath; // IndexPath of the expanded cell
 @property (nonatomic ,readonly) NSIndexPath * expandedContentIndexPath; // IndexPath holding the newly created expanded cell
 
-- (NSIndexPath *)adjustedIndexPath:(NSIndexPath *)indexPath;
+- (NSIndexPath *)adjustedIndexPathFromTable:(NSIndexPath *)indexPath; // returns an adjusted indexPath that the table gave to the delegate/datasource
+- (NSIndexPath *)adjustedIndexPathFromDelegate:(NSIndexPath *)indexPath; // returns an adjusted indexPath that the delegate/datasource gave to the table
+
 
 @end
