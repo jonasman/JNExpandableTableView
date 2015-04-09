@@ -26,6 +26,9 @@
     
 }
 
+@dynamic delegate;
+@dynamic dataSource;
+
 
 #pragma mark Public
 
