@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @class JNExpandableTableView;
 
 
@@ -17,11 +18,6 @@ rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.sectio
 
 
 @protocol JNExpandableTableViewDataSource <NSObject, UITableViewDataSource>
-
-
-- (NSInteger)tableView:(JNExpandableTableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-
 
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath;
 
@@ -46,11 +42,13 @@ rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.sectio
 @property (nonatomic, assign) id <JNExpandableTableViewDelegate> delegate;
 
 
-@property (nonatomic) NSIndexPath * expandedIndexPath; // IndexPath of the expanded cell
-@property (nonatomic ,readonly) NSIndexPath * expandedContentIndexPath; // IndexPath holding the newly created expanded cell
+@property (nonatomic)  NSIndexPath * _Nullable expandedIndexPath; // IndexPath of the expanded cell
+@property (nonatomic, readonly) NSIndexPath * _Nullable expandedContentIndexPath; // IndexPath holding the newly created expanded cell
 
 - (NSIndexPath *)adjustedIndexPathFromTable:(NSIndexPath *)indexPath; // returns an adjusted indexPath that the table gave to the delegate/datasource
 - (NSIndexPath *)adjustedIndexPathFromDelegate:(NSIndexPath *)indexPath; // returns an adjusted indexPath that the delegate/datasource gave to the table
 
 
 @end
+
+NS_ASSUME_NONNULL_END
