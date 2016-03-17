@@ -17,7 +17,7 @@ Delegates
 ============
 
 To make a cell expandable just implement:
-```
+```objective-c
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath
 ```
 and return `YES`
@@ -28,7 +28,7 @@ DataSource
 
 As there are no delegate interceptions you need to return the number of cells in this format:
 
-```
+```objective-c
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return JNExpandableTableViewNumberOfRowsInSection(tableView,20);
@@ -36,7 +36,7 @@ As there are no delegate interceptions you need to return the number of cells in
 ```
 
 To return an expanded Cell, check the indexPath and return the cell you need:
-```
+```objective-c
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if ([self.tableView.expandedContentIndexPath isEqual:indexPath])
@@ -65,7 +65,7 @@ To return an expanded Cell, check the indexPath and return the cell you need:
 Considerations
 ============
 
-The class is a subclass of UITableView and thus we are not replacing delegates and doing tricky interceptions.
+JNExpandableTableView is a subclass of UITableView and thus we are not replacing delegates and doing tricky interceptions.
 That is why you need to help this class in some datasource calls.
 
 
