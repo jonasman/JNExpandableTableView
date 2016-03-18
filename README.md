@@ -12,7 +12,7 @@ Installation
 
 ####Manual
 
-Copy JNExpandableTableView classes into your project.
+Copy JNExpandableTableView classe into your project.
 
 ####CocoaPods
 ```ruby
