@@ -37,12 +37,12 @@ extern NSInteger JNExpandableTableViewNumberOfRowsInSection(JNExpandableTableVie
 @interface JNExpandableTableView : UITableView
 
 
-@property (nonatomic, assign) id <JNExpandableTableViewDataSource> dataSource;
-@property (nonatomic, assign) id <JNExpandableTableViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id <JNExpandableTableViewDataSource> dataSource;
+@property (nonatomic, weak, nullable) id <JNExpandableTableViewDelegate> delegate;
 
 
-@property (nonatomic)  NSIndexPath * _Nullable expandedIndexPath; // IndexPath of the expanded cell
-@property (nonatomic, readonly) NSIndexPath * _Nullable expandedContentIndexPath; // IndexPath holding the newly created expanded cell
+@property (nonatomic, nullable)  NSIndexPath * expandedIndexPath; // IndexPath of the expanded cell
+@property (nonatomic, readonly, nullable) NSIndexPath * expandedContentIndexPath; // IndexPath holding the newly created expanded cell
 
 - (NSIndexPath *)adjustedIndexPathFromTable:(NSIndexPath *)indexPath; // returns an adjusted indexPath that the table gave to the delegate/datasource
 - (NSIndexPath *)adjustedIndexPathFromDelegate:(NSIndexPath *)indexPath; // returns an adjusted indexPath that the delegate/datasource gave to the table

@@ -15,6 +15,7 @@
 		CF194C0719FFB44700316D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF194C0519FFB44700316D47 /* LaunchScreen.xib */; };
 		CF194C1319FFB44700316D47 /* JNExpandableTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194C1219FFB44700316D47 /* JNExpandableTableViewDemoTests.m */; };
 		CF194C1F19FFB47D00316D47 /* JNExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF194C1E19FFB47D00316D47 /* JNExpandableTableView.m */; };
+		CF7049991C9C7315000E398C /* JNExpandableTableView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CF7049981C9C7315000E398C /* JNExpandableTableView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		CF194C1219FFB44700316D47 /* JNExpandableTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNExpandableTableViewDemoTests.m; sourceTree = "<group>"; };
 		CF194C1D19FFB47D00316D47 /* JNExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNExpandableTableView.h; sourceTree = "<group>"; };
 		CF194C1E19FFB47D00316D47 /* JNExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNExpandableTableView.m; sourceTree = "<group>"; };
+		CF7049981C9C7315000E398C /* JNExpandableTableView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = JNExpandableTableView.podspec; path = ../../../JNExpandableTableView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		CF194BF619FFB44700316D47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF7049981C9C7315000E398C /* JNExpandableTableView.podspec */,
 				CF194BF719FFB44700316D47 /* Info.plist */,
 				CF194BF819FFB44700316D47 /* main.m */,
 			);
@@ -213,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7049991C9C7315000E398C /* JNExpandableTableView.podspec in Resources */,
 				CF194C0219FFB44700316D47 /* Main.storyboard in Resources */,
 				CF194C0719FFB44700316D47 /* LaunchScreen.xib in Resources */,
 				CF194C0419FFB44700316D47 /* Images.xcassets in Resources */,

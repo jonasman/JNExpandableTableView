@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'JNExpandableTableView'
-  s.version  = '1.0.1'
+  s.version  = '1.0.2'
   s.platform = :ios, '7.0'
   s.license  = { :type => 'MIT'}
   s.summary  = 'Expandable UITableView'
