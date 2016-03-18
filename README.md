@@ -1,3 +1,4 @@
+[![JNExpandableTableView](https://img.shields.io/cocoapods/v/JNExpandableTableView.svg)]()
 JNExpandableTableView
 =====================
 
@@ -9,9 +10,19 @@ The code is inspired by Apple's example DateCell
 Installation
 ============
 
-1. Copy JNExpandableTableView classes into your project.
-2. Replace UITableView class with JNExpandableTableView
+####Manual
 
+Copy JNExpandableTableView classe into your project.
+
+####CocoaPods
+```ruby
+	pod 'JNExpandableTableView'
+```
+
+Usage
+============
+
+Replace your UITableView classes with JNExpandableTableView
 
 Delegates
 ============
@@ -19,9 +30,10 @@ Delegates
 To make a cell expandable just implement:
 ```objective-c
 - (BOOL)tableView:(JNExpandableTableView *)tableView canExpand:(NSIndexPath *)indexPath
+{
+    return YES;
+}
 ```
-and return `YES`
-
 
 DataSource
 ============
@@ -31,7 +43,7 @@ As there are no delegate interceptions you need to return the number of cells in
 ```objective-c
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return JNExpandableTableViewNumberOfRowsInSection(tableView,20);
+    return JNExpandableTableViewNumberOfRowsInSection((JNExpandableTableView *)tableView,section,20);
 }
 ```
 
@@ -51,11 +63,13 @@ To return an expanded Cell, check the indexPath and return the cell you need:
     
     else
     {
-        static NSString *CellIdentifier = @"Cell";
+        NSIndexPath * adjustedIndexPath = [self.tableView adjustedIndexPathFromTable:indexPath];
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        static NSString *cellIdentifier = @"Cell";
         
-        cell.textLabel.text = [NSString stringWithFormat:@"Index: %ld",(long)indexPath.row];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"Index: %ld",(long)adjustedIndexPath.row];
         
         return cell;
     }
