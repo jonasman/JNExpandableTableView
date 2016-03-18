@@ -8,6 +8,12 @@
 
 #import "JNExpandableTableView.h"
 
+
+NSInteger JNExpandableTableViewNumberOfRowsInSection(JNExpandableTableView * tableView, NSInteger section, NSInteger rows) {
+	
+	return rows + (tableView.expandedIndexPath && section == tableView.expandedIndexPath.section ? 1 : 0);
+}
+
 @interface JNExpandableTableView()
 
 

@@ -47,7 +47,7 @@
 
 - (NSInteger)tableView:(JNExpandableTableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return JNExpandableTableViewNumberOfRowsInSection(tableView,20);
+    return JNExpandableTableViewNumberOfRowsInSection(tableView,section,20);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

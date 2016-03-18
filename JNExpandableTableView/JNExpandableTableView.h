@@ -12,9 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @class JNExpandableTableView;
 
 
-// Macro to help calculating the number of rows
-#define JNExpandableTableViewNumberOfRowsInSection(tableView,rows) \
-rows + (section == ((JNExpandableTableView *)tableView).expandedIndexPath.section && ((JNExpandableTableView *)tableView).expandedIndexPath?1:0)
+// Function to help calculating the number of rows
+extern NSInteger JNExpandableTableViewNumberOfRowsInSection(JNExpandableTableView * tableView, NSInteger section, NSInteger rows);
 
 
 @protocol JNExpandableTableViewDataSource <NSObject, UITableViewDataSource>
