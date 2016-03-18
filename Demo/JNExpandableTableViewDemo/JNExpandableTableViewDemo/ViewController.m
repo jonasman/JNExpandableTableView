@@ -45,9 +45,9 @@
         return 44.0f;
 }
 
-- (NSInteger)tableView:(JNExpandableTableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return JNExpandableTableViewNumberOfRowsInSection(tableView,section,20);
+    return JNExpandableTableViewNumberOfRowsInSection((JNExpandableTableView *)tableView,section,2);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

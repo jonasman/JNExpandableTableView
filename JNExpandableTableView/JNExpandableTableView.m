@@ -75,32 +75,34 @@ NSInteger JNExpandableTableViewNumberOfRowsInSection(JNExpandableTableView * tab
     
     NSIndexPath * iPath = [self indexPathForRowAtPoint:location];
     
-    
-    if ([iPath isEqual:self.expandedIndexPath])
-    {
-        [self collapseCell:iPath];
-    }
-    else if (![iPath isEqual:self.expandedContentIndexPath])
-    {
-        [self beginUpdates];
-        
-        NSIndexPath * adjustedIpath = [self adjustedIndexPathFromTable:iPath];
-        
-        BOOL canExpand =  _expandedDataSourceHas.tableViewCanExpand? [self.dataSource tableView:self canExpand:adjustedIpath] : NO;
-        
-        if ([self isAnyCellExpanded])
-            [self collapseCell:self.expandedIndexPath];
-        
-        if (canExpand)
-            [self expandCell:adjustedIpath];
-        
-        [self endUpdates];
-        
-        if (canExpand)
-            [self scrollToRowAtIndexPath:self.expandedContentIndexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
-    }
-    
-    [super touchesEnded:touches withEvent:event];
+	if (iPath)
+	{
+		if ([iPath isEqual:self.expandedIndexPath])
+		{
+			[self collapseCell:iPath];
+		}
+		else if (![iPath isEqual:self.expandedContentIndexPath])
+		{
+			[self beginUpdates];
+			
+			NSIndexPath * adjustedIpath = [self adjustedIndexPathFromTable:iPath];
+			
+			BOOL canExpand =  _expandedDataSourceHas.tableViewCanExpand? [self.dataSource tableView:self canExpand:adjustedIpath] : NO;
+			
+			if ([self isAnyCellExpanded])
+				[self collapseCell:self.expandedIndexPath];
+			
+			if (canExpand)
+				[self expandCell:adjustedIpath];
+			
+			[self endUpdates];
+			
+			if (canExpand)
+				[self scrollToRowAtIndexPath:self.expandedContentIndexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+		}
+	}
+	
+	[super touchesEnded:touches withEvent:event];
 }
 
 - (BOOL)isAnyCellExpanded
