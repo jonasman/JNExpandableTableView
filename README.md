@@ -10,11 +10,11 @@ The code is inspired by Apple's example DateCell
 Installation
 ============
 
-####Manual
+#### Manual
 
 Copy JNExpandableTableView class into your project.
 
-####CocoaPods
+#### CocoaPods
 ```ruby
 	pod 'JNExpandableTableView'
 ```
